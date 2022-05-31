@@ -227,8 +227,9 @@ function draw() {
 }
 
 function keyPressed(){
-  if (keyCode === 32 && die[0] === false) {
+  if (touches.length > 0 || (keyCode === 32 && die[0] === false)) {
     die[0] = true;
     die[2] = round(random(12, 18));
+    touches = [];
   }
 }
